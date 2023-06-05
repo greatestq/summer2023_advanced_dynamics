@@ -1,0 +1,11 @@
+{
+  "hash": "201809aa2d0a35aeaa95afec5c832bcf",
+  "result": {
+    "markdown": "[//]: # latex new commands\n\\newcommand\\orig[2]{\\mathbf{r}_{#1}^{(#2)}}\n\\newcommand\\bvec[2]{{\\mathbf{e}_{#1}^{(#2)}}}\n\n# Kinematics: the description of motion\n*Motivation* describe the motion of a particle or rigid body in 3D space.\n\n\n```{tikz}\n\\begin{tikzpicture}\n \\draw (0,0) circle (1cm);\n % \\draw (0,0) circle (2cm);\n\\end{tikzpicture}\n```\n\n::: {.cell execution_count=1}\n\n::: {.cell-output .cell-output-display}\n![](vectors_files/figure-html/cell-2-output-1.png){width=389 height=389}\n:::\n:::\n\n\n# Data for a three-dimensional line\nzline = np.linspace(0, 15, 1000)\nxline = np.sin(zline)\nyline = np.cos(zline)\nax.plot3D(xline, yline, zline, 'gray')\n\n## Reference frame\nThe geometry of motion is called kinematics. Motion is described with respect to a reference frame. A reference frame consists of a reference point called the origin and three directions called basis vectors. We consider two types of frames:\n1. Inertial or fixed, and \n2. Body-fixed or moving.\n\n::: {#def-frame}\n## Reference frame\nA reference frame is a set of basis vectors and an origin. We will always be using a set of three orthonormal basis vectors. Notation:\n$$\n(\\bvec{1}{i}, \\bvec{2}{i}, \\bvec{3}{i}, \\orig{A}{i}),\n$$\n:::\nwhere $\\bvec{j}{i}$, $j=1,2,3$ are the orthonormal basis vectors and $\\orig{A}{i}$ is the origin, the superscript $i$ is a label to keep track of multiple reference frames. By convention $i=0$ is the fixed (inertial) frame.\n\n\n\n\n\n\n@knuth84 for additional discussion of literate programming.\n\n::: {.callout-tip}\n## Tip with Title\n\nThis is an example of a callout with a title.\n:::\n\nSee @def-frame.\n\n::: {.cell execution_count=2}\n\n::: {.cell-output .cell-output-stdout}\n```\n1.0000000000000002\n1.0000000000000002\n1.0000000000000002\n```\n:::\n\n::: {.cell-output .cell-output-display}\n![](vectors_files/figure-html/cell-3-output-2.png){width=401 height=399}\n:::\n:::\n\n\nFor example, see @fig-plot.\n\n",
+    "supporting": [
+      "vectors_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

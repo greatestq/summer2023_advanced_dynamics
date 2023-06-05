@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "dynamics",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This book contains the topics Dr. D.M. Luchtenburg teaches in ME424 Advanced Dynamics course at The Cooper Union. It was initially written in 2023 summer with the aid of his former students Alsu Flare (Class of 2023) and Eunkyu Kim (Class of 2023).\nThe topics covered are\nKinematics: the description of motion\nRotation Matrices and Moving Frame Method (MFM)\nPrinciples of Virtual Work\nEuler Lagriangian Formulation\nLagrangian Multiplers\nThe book also contains several simple examples with both analytical and python-based numerical solutions.\nIf you spot any mistakes or have any questions, please contact via one of the three emails below\ndirk dot luchtenburg at cooper dot edu\nalsu dot flare at cooper dot edu\nkim76 at cooper dot edu"
+  },
+  {
+    "objectID": "vectors.html",
+    "href": "vectors.html",
+    "title": "2  Kinematics: the description of motion",
+    "section": "",
+    "text": "3 Data for a three-dimensional line\nzline = np.linspace(0, 15, 1000) xline = np.sin(zline) yline = np.cos(zline) ax.plot3D(xline, yline, zline, ‘gray’)"
+  },
+  {
+    "objectID": "vectors.html#reference-frame",
+    "href": "vectors.html#reference-frame",
+    "title": "2  Kinematics: the description of motion",
+    "section": "3.1 Reference frame",
+    "text": "3.1 Reference frame\nThe geometry of motion is called kinematics. Motion is described with respect to a reference frame. A reference frame consists of a reference point called the origin and three directions called basis vectors. We consider two types of frames: 1. Inertial or fixed, and 2. Body-fixed or moving.\n\nDefinition 3.1 (Reference frame) A reference frame is a set of basis vectors and an origin. We will always be using a set of three orthonormal basis vectors. Notation: \\[\n({\\mathbf{e}_{1}^{(i)}}, {\\mathbf{e}_{2}^{(i)}}, {\\mathbf{e}_{3}^{(i)}}, \\mathbf{r}_{A}^{(i)}),\n\\]\n\nwhere \\({\\mathbf{e}_{j}^{(i)}}\\), \\(j=1,2,3\\) are the orthonormal basis vectors and \\(\\mathbf{r}_{A}^{(i)}\\) is the origin, the superscript \\(i\\) is a label to keep track of multiple reference frames. By convention \\(i=0\\) is the fixed (inertial) frame.\nKnuth (1984) for additional discussion of literate programming.\n\n\n\n\n\n\nTip with Title\n\n\n\nThis is an example of a callout with a title.\n\n\nSee Definition 3.1.\n\n\n1.0000000000000002\n1.0000000000000002\n1.0000000000000002\n\n\n\n\n\nFor example, see ?fig-plot.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "3  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  }
+]

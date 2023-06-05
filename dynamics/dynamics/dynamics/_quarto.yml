@@ -1,0 +1,20 @@
+project:
+  type: book
+
+book:
+  title: "dynamics"
+  author: "Dirk M. Luchtenburg"
+  date: "5/8/2023"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - vectors.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+
