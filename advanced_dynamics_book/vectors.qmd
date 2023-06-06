@@ -85,8 +85,25 @@ $$
 These two properties are invariant of whichever frame one uses ("superscript-independent") as long as the three basis vectors are orthonormal. 
 
 ### Vectors and Cross Product
-In the context of kinematics, a vector contains information about the relative position and direction. A single vector can be expressed in infinitely many different ways depending on the choice of a reference frame. In other words, "coordinates" are "frame-dependent".
+In the context of kinematics, a vector contains information about the relative position and direction. A single vector can be expressed in infinitely many different ways depending on the choice of a reference frame. In other words, "coordinates" are "frame-dependent". 
 
+Suppose we have a three dimensional vector $\textbf{r}$ and a reference frame located at some arbitary origin $\textbf{O}$ with three orthonormal basis vectors $\bvec{1}{0}, \bvec{2}{0}, \bvec{3}{0}$. Then the vector $\textbf{r}$ can be expressed as following
+$$
+\textbf{r} = r_1\bvec{1}{0} + r_2\bvec{2}{0} + r_3\bvec{3}{0} = \begin{pmatrix} \bvec{1}{0} & \bvec{2}{0} & \bvec{3}{0} \end{pmatrix} \begin{pmatrix} r_1 \\ r_2 \\ r_3 \end{pmatrix}
+$$
+where $r_1, r_2, r_3$ are the "coordinates". However, these "coordinates" need not be the same in other reference frames. 
+
+One of the most frequently used vector products in Dynamics is the cross product. Suppose we have some arbitary vectors $\textbf{u}$ and $\textbf{v}$ both expressed with respect to the same reference frame.
+$$
+\textbf{u} = \Sigma_{i=1}^{3}u_i\textbf{e}_i
+$$
+$$
+\textbf{v} = \Sigma_{j=1}^{3}v_j\textbf{e}_j
+$$
+Then the cross product between the two vectors proceed as follows
+$$
+\textbf{u} \times \textbf{v} = (u_1\textbf{e}_1 + u_2\textbf{e}_2 + u_3\textbf{e}_3) \times (v_1\textbf{e}_1 + v_2\textbf{e}_2 + v+3\textbf{e}_3)
+$$
 @knuth84 for additional discussion of literate programming.
 
 ::: {.callout-tip}

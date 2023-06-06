@@ -224,7 +224,16 @@ div.csl-indent {
 <section id="vectors-and-cross-product" class="level3" data-number="2.1.2">
 <h3 data-number="2.1.2" class="anchored" data-anchor-id="vectors-and-cross-product"><span class="header-section-number">2.1.2</span> Vectors and Cross Product</h3>
 <p>In the context of kinematics, a vector contains information about the relative position and direction. A single vector can be expressed in infinitely many different ways depending on the choice of a reference frame. In other words, “coordinates” are “frame-dependent”.</p>
-<p><span class="citation" data-cites="knuth84">Knuth (<a href="references.html#ref-knuth84" role="doc-biblioref">1984</a>)</span> for additional discussion of literate programming.</p>
+<p>Suppose we have a three dimensional vector <span class="math inline">\(\textbf{r}\)</span> and a reference frame located at some arbitary origin <span class="math inline">\(\textbf{O}\)</span> with three orthonormal basis vectors <span class="math inline">\({\mathbf{e}_{1}^{(0)}}, {\mathbf{e}_{2}^{(0)}}, {\mathbf{e}_{3}^{(0)}}\)</span>. Then the vector <span class="math inline">\(\textbf{r}\)</span> can be expressed as following <span class="math display">\[
+\textbf{r} = r_1{\mathbf{e}_{1}^{(0)}} + r_2{\mathbf{e}_{2}^{(0)}} + r_3{\mathbf{e}_{3}^{(0)}} = \begin{pmatrix} {\mathbf{e}_{1}^{(0)}} &amp; {\mathbf{e}_{2}^{(0)}} &amp; {\mathbf{e}_{3}^{(0)}} \end{pmatrix} \begin{pmatrix} r_1 \\ r_2 \\ r_3 \end{pmatrix}
+\]</span> where <span class="math inline">\(r_1, r_2, r_3\)</span> are the “coordinates”. However, these “coordinates” need not be the same in other reference frames.</p>
+<p>One of the most frequently used vector products in Dynamics is the cross product. Suppose we have some arbitary vectors <span class="math inline">\(\textbf{u}\)</span> and <span class="math inline">\(\textbf{v}\)</span> both expressed with respect to the same reference frame. <span class="math display">\[
+\textbf{u} = \Sigma_{i=1}^{3}u_i\textbf{e}_i
+\]</span> <span class="math display">\[
+\textbf{v} = \Sigma_{j=1}^{3}v_j\textbf{e}_j
+\]</span> Then the cross product between the two vectors proceed as follows <span class="math display">\[
+\textbf{u} \times \textbf{v} = (u_1\textbf{e}_1 + u_2\textbf{e}_2 + u_3\textbf{e}_3) \times (v_1\textbf{e}_1 + v_2\textbf{e}_2 + v+3\textbf{e}_3)
+\]</span> <span class="citation" data-cites="knuth84">Knuth (<a href="references.html#ref-knuth84" role="doc-biblioref">1984</a>)</span> for additional discussion of literate programming.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -241,9 +250,9 @@ Tip with Title
 <p>See <a href="#def-frame">Definition&nbsp;<span>2.1</span></a>.</p>
 <div class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
-<pre><code>0.9999999999999998
-0.9999999999999994
-0.9999999999999993</code></pre>
+<pre><code>1.0000000000000004
+1.0
+1.0000000000000004</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="vectors_files/figure-html/cell-3-output-2.png" width="401" height="399"></p>
