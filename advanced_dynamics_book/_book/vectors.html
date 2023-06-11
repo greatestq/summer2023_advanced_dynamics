@@ -164,6 +164,7 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#reference-frame" id="toc-reference-frame" class="nav-link" data-scroll-target="#reference-frame"><span class="header-section-number">2.1.1</span> Reference frame</a></li>
   <li><a href="#vectors-and-cross-product" id="toc-vectors-and-cross-product" class="nav-link" data-scroll-target="#vectors-and-cross-product"><span class="header-section-number">2.1.2</span> Vectors and Cross Product</a></li>
+  <li><a href="#rotation-matrices" id="toc-rotation-matrices" class="nav-link" data-scroll-target="#rotation-matrices"><span class="header-section-number">2.1.3</span> Rotation Matrices</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -200,7 +201,11 @@ div.csl-indent {
 <p>In the realm of practical applications and real-world scenarios, the study of motion necessitates a comprehensive understanding of three-dimensional space. As such, it becomes imperative to delve into the foundations of three-dimensional linear algebra. This branch of mathematics provides the tools and concepts needed to describe and analyze motion in a three-dimensional context. By grasping the principles of three-dimensional linear algebra, we gain the ability to navigate and comprehend the complexities inherent in the physical world, enabling us to formulate accurate models and predictions pertaining to dynamics. This foundational knowledge forms an integral part of any comprehensive dynamics book, allowing readers to unlock the fundamental principles underlying the motion of objects and systems in three-dimensional space.</p>
 <section id="reference-frame" class="level3" data-number="2.1.1">
 <h3 data-number="2.1.1" class="anchored" data-anchor-id="reference-frame"><span class="header-section-number">2.1.1</span> Reference frame</h3>
-<p>Motion is described with respect to a reference frame. A reference frame consists of a reference point called the origin and three orthonormal basis vectors. We consider two types of frames: 1. Inertial or fixed, and 2. Body-fixed or moving.</p>
+<p>Motion is described with respect to a reference frame. A reference frame consists of a reference point called the origin and three orthonormal basis vectors. We consider two types of frames:</p>
+<ol type="1">
+<li><p><strong>Fixed frame</strong>, also known as an inertial frame, is a reference frame that remains stationary or moves with a constant velocity relative to an external observer or a point of reference. In a fixed frame, Newton’s laws of motion hold true, and the laws of physics are considered to be the same regardless of the frame’s position or orientation.</p></li>
+<li><p><strong>Moving frame</strong>, also known as a non-inertial frame or body-fixed, is a reference frame that is accelerating, rotating, or undergoing any other type of non-uniform motion relative to a fixed reference frame. In a moving frame, the laws of motion are not as straightforward, since additional forces may come into play due to the frame’s acceleration or rotation.</p></li>
+</ol>
 <div id="def-frame" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2.1 (Reference frame) </strong></span>A reference frame is a set of basis vectors and an origin. We will always be using a set of three orthonormal basis vectors. Notation: <span class="math display">\[
 ({\mathbf{e}_{1}^{(i)}}, {\mathbf{e}_{2}^{(i)}}, {\mathbf{e}_{3}^{(i)}}, \mathbf{r}_{A}^{(i)}),
@@ -232,8 +237,36 @@ div.csl-indent {
 \]</span> <span class="math display">\[
 \textbf{v} = \Sigma_{j=1}^{3}v_j\textbf{e}_j
 \]</span> Then the cross product between the two vectors proceed as follows <span class="math display">\[
-\textbf{u} \times \textbf{v} = (u_1\textbf{e}_1 + u_2\textbf{e}_2 + u_3\textbf{e}_3) \times (v_1\textbf{e}_1 + v_2\textbf{e}_2 + v+3\textbf{e}_3)
-\]</span> <span class="citation" data-cites="knuth84">Knuth (<a href="references.html#ref-knuth84" role="doc-biblioref">1984</a>)</span> for additional discussion of literate programming.</p>
+\textbf{u} \times \textbf{v} = (u_1\textbf{e}_1 + u_2\textbf{e}_2 + u_3\textbf{e}_3) \times (v_1\textbf{e}_1 + v_2\textbf{e}_2 + v_3\textbf{e}_3)
+\]</span> <span class="math display">\[
+= (u_2v_3-u_3v_2)\textbf{e}_1+(u_3v_1-u_1v_3)\textbf{e}_2 + (u_1v_2 - u_2v_1)\textbf{e}_3
+\]</span> <span class="math display">\[
+= \begin{pmatrix} \textbf{e}_1 &amp; \textbf{e}_2 &amp; \textbf{e}_3 \end{pmatrix} \begin{pmatrix} u_2v_3 - u_3v_2 \\ u_3v_1 - u_1v_3 \\ u_1v_2 - u_2v_1 \end{pmatrix}
+\]</span> <span class="math display">\[
+= \begin{pmatrix} \textbf{e}_1 &amp; \textbf{e}_2 &amp; \textbf{e}_3 \end{pmatrix} \begin{pmatrix} 0 &amp; -u_3 &amp; u_2 \\ u_3 &amp; 0 &amp; -u_1 \\ -u_2 &amp; u_1 &amp; 0 \end{pmatrix} \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix}
+\]</span></p>
+<p>Notice that the matrix containing the components of the <span class="math inline">\(\textbf{u}\)</span> is skew-symmetric. In other words, a cross product operation can be seen equivalent to a left matrix multiplication of a skew-symmetric matrix. This is a key result that will be frequently used in subsequent chapters. Hereafter, we denote skew symmetric matrices with a tilde symbol and note that the transpose of a skew symmetric matrix is precisely the negative of itself. <span class="math display">\[
+\widetilde{\textbf{u}} = \begin{pmatrix} 0 &amp; -u_3 &amp; u_2 \\ u_3 &amp; 0 &amp; -u_1 \\ -u_2 &amp; u_1 &amp; 0\end{pmatrix}
+\]</span> <span class="math display">\[
+\widetilde{\textbf{u}}^T = -\widetilde{\textbf{u}}
+\]</span></p>
+</section>
+<section id="rotation-matrices" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="rotation-matrices"><span class="header-section-number">2.1.3</span> Rotation Matrices</h3>
+<div id="def-Rmatrix" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2.2 (Rotation Matrix) </strong></span>A rotation matrix is a tool used to describe the transformation between different reference frames. It allows us to convert the coordinates of a point or a vector from one reference frame to another.</p>
+<p>Consider two reference frames: Frame A and Frame B. The rotation matrix, denoted as <span class="math inline">\(\textbf{R}^{(a,b)}\)</span>, represents the rotational transformation from Frame A to Frame B.</p>
+<p>Based on the notation that we are using, the rotation matrix from Frame B to Frame A would be written as <span class="math inline">\(\textbf{R}^{(b,a)}\)</span>.</p>
+</div>
+<p><span class="math display">\[
+({\mathbf{e}_{1}^{(b)}} {\mathbf{e}_{2}^{(b)}} {\mathbf{e}_{3}^{(b)}}) = ({\mathbf{e}_{1}^{(a)}} {\mathbf{e}_{2}^{(a)}} {\mathbf{e}_{3}^{(a)}}) \textbf{R}^{(a,b)}
+\]</span> or in more compact notation, <span class="math display">\[
+\underline{\underline{\textbf{e}}}^{(b)} = \underline{\underline{\textbf{e}}}^{(a)}\textbf{R}^{(a,b)}
+\]</span> where the double-underline notation indicates a reference frame matrix.</p>
+<p>In this course, all our reference frames consist of orthonormal basis vectors. In other words, the reference frame matrices are orthogonal. Furthermore, 3 dimensional rotation matrices is an element of the SO(3). This leads us to another useful property that we will frequently make use of in subsequent chapters: <span class="math display">\[
+(\textbf{R}^{(a,b)})^{-1} = (\textbf{R}^{(a,b)})^T
+\]</span></p>
+<p><span class="citation" data-cites="knuth84">Knuth (<a href="references.html#ref-knuth84" role="doc-biblioref">1984</a>)</span> for additional discussion of literate programming.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
