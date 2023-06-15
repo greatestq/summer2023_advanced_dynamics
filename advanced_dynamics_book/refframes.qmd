@@ -6,6 +6,7 @@
 
 ### Basics of Reference Frames
 
+
 A **reference frame** consists of an origin (a point in space) and a set of axes (lines or vectors) that define the coordinate system. By using this coordinate system, we can describe the position, velocity, and acceleration of objects relative to the reference frame.
 
 There are two main types of reference frames: 
@@ -34,4 +35,15 @@ $$
 
 
 
-*Insert a graphic with frame operations here?*
+
+``` {python}
+#| echo: false
+import matplotlib.pyplot as plt
+import numpy as np
+plt.xlim(-1, 1)
+plt.ylim(-1, 1)
+plt.tick_params(axis='x', which='both', bottom=False, top=False, labelbottom=False)
+plt.tick_params(axis='y', which='both', right=False, left=False, labelleft=False)
+
+plt.show()
+```

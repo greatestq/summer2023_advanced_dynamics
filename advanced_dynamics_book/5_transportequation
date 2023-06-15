@@ -1,0 +1,20 @@
+## Transport Equation
+
+The **transport equation** represents how the motion of a rigid body affects the time rate of change of a physical quantity associated with the body (such as mass, momentum, or energy). The equation balances change in the quantity between diffferent reference frames: 
+
+$$
+\frac{d (u)}{dt}^{(0)} = e^{(1)}  ( \tilde{w} u + \frac{d (u)}{dt} ^{(1)} ) 
+$$
+
+### Example: Relative Sattelite Motion
+``` {python}
+#| echo: false
+import matplotlib.pyplot as plt
+import numpy as np
+plt.xlim(-1, 1)
+plt.ylim(-1, 1)
+plt.tick_params(axis='x', which='both', bottom=False, top=False, labelbottom=False)
+plt.tick_params(axis='y', which='both', right=False, left=False, labelleft=False)
+
+plt.show()
+```
