@@ -1,0 +1,56 @@
+[//]: # latex new commands
+\newcommand\orig[2]{\mathbf{r}_{#1}^{(#2)}}
+\newcommand\bvec[2]{{\mathbf{e}_{#1}^{(#2)}}}
+
+## Simple Motion
+
+### Derivative of a Reference Frame
+
+As covered in previous sections, a reference frame is a coordinate system used to describe the motion and positions of objects. It provides a frame of reference against which the motion of objects can be observed and analyzed.
+
+The **derivative of a reference frame** refers to the rate of change of the reference frame itself with respect to time. It represents how the reference frame is moving or rotating in relation to another fixed or inertial reference frame.
+
+### Example: Simple Rotation around the 3-axis
+This example covers the relationship between reference frames (0) and (1), represented by a rotation about the stationary 3-axis.
+
+``` {python}
+#| echo: false
+import matplotlib.pyplot as plt
+import numpy as np
+
+plt.arrow(0, -0.7, 0, 1, width = 0.009)
+plt.text(-0.07, 0.4, '$e^{(0)}_2$', fontsize = 17)
+
+plt.arrow(0, -0.7, 0.7, 0, width = 0.009)
+plt.text(0.75, -0.74, '$e^{(0)}_1$', fontsize = 17)
+
+plt.arrow(0, -0.7, 0.7, 0.25, width = 0.009)
+plt.text(0.75, -0.4, '$e^{(1)}_2$', fontsize = 17)
+
+plt.arrow(0, -0.7, -0.2, 0.95, width = 0.009)
+plt.text(-0.33, 0.3, '$e^{(1)}_1$', fontsize = 17)
+
+plt.xlim(-1, 1)
+plt.ylim(-1, 1)
+plt.tick_params(axis='x', which='both', bottom=False, top=False, labelbottom=False)
+plt.tick_params(axis='y', which='both', right=False, left=False, labelleft=False)
+
+plt.show()
+```
+
+Using an appropriate rotation matrix, we can describe the transformation between the two reference frames. 
+
+$$
+\begin{equation}
+R =
+\begin{bmatrix} 
+	a & b & c \\
+	c & d & d\\
+	e & f & g \\
+\end{bmatrix}
+\end{equation}
+$$
+
+### Example: Tracking 2D Point Motion 
+
+### Example: Tracking 3D Point Motion
