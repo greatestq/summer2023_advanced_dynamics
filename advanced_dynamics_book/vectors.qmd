@@ -168,7 +168,7 @@ In future applications or examples, one might be forced to examine the rate of c
 
 Taking a time derivative of the above the above expression is a simple application of the chain rule from introductory calculus.
 $$
-\dot{\ddoubleunderline{e}^{(1)}} = \dot{\ddoubleunderline{e}^{(0)}\boldsymbol{R}^{(0,1)}}
+\dot{\ddoubleunderline{e}^{(1)}} = \dot{\ddoubleunderline{e}^{(0)}}\boldsymbol{R}^{(0,1)}
 $$
 @knuth84 for additional discussion of literate programming.
 
