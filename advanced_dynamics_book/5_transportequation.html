@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>refframes</title>
+<title>transportequation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,16 +23,16 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="refframes_files/libs/clipboard/clipboard.min.js"></script>
-<script src="refframes_files/libs/quarto-html/quarto.js"></script>
-<script src="refframes_files/libs/quarto-html/popper.min.js"></script>
-<script src="refframes_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="refframes_files/libs/quarto-html/anchor.min.js"></script>
-<link href="refframes_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="refframes_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="refframes_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="refframes_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="refframes_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="5_transportequation_files/libs/clipboard/clipboard.min.js"></script>
+<script src="5_transportequation_files/libs/quarto-html/quarto.js"></script>
+<script src="5_transportequation_files/libs/quarto-html/popper.min.js"></script>
+<script src="5_transportequation_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="5_transportequation_files/libs/quarto-html/anchor.min.js"></script>
+<link href="5_transportequation_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="5_transportequation_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="5_transportequation_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="5_transportequation_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="5_transportequation_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Reference Frames and Operations</h1>
+<h1 class="title">Transport Equation</h1>
 </div>
 
 
@@ -62,31 +62,15 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="basics-of-reference-frames" class="level3">
-<h3 class="anchored" data-anchor-id="basics-of-reference-frames">Basics of Reference Frames</h3>
-<p>A <strong>reference frame</strong> consists of an origin (a point in space) and a set of axes (lines or vectors) that define the coordinate system. By using this coordinate system, we can describe the position, velocity, and acceleration of objects relative to the reference frame.</p>
-<p>There are two main types of reference frames:</p>
-<ol type="1">
-<li><p><strong>Fixed frame</strong>, also known as an inertial frame, is a reference frame that remains stationary or moves with a constant velocity relative to an external observer or a point of reference. In a fixed frame, Newton’s laws of motion hold true, and the laws of physics are considered to be the same regardless of the frame’s position or orientation.</p></li>
-<li><p><strong>Moving frame</strong>, also known as a non-inertial frame, is a reference frame that is accelerating, rotating, or undergoing any other type of non-uniform motion relative to a fixed reference frame. In a moving frame, the laws of motion are not as straightforward, since additional forces may come into play due to the frame’s acceleration or rotation.</p></li>
-</ol>
-</section>
-<section id="rotation-matrices" class="level3">
-<h3 class="anchored" data-anchor-id="rotation-matrices">Rotation Matrices</h3>
-<p>A <strong>rotation matrix</strong> is a tool used to describe the transformation between different reference frames. It allows us to convert the coordinates of a point or a vector from one reference frame to another.</p>
-<p>Let’s consider two reference frames: Frame A and Frame B. The rotation matrix, denoted as R, represents the transformation from Frame A to Frame B or vice versa. This matrix describes how the axes of Frame A align with the axes of Frame B due to the rotation between them.</p>
+<p>The <strong>transport equation</strong> represents how the motion of a rigid body affects the time rate of change of a physical quantity associated with the body (such as mass, momentum, or energy). The equation balances change in the quantity between diffferent reference frames:</p>
 <p><span class="math display">\[
-A = {\mathbf{e}_{1}^{(A)}}, {\mathbf{e}_{2}^{(A)}}, {\mathbf{e}_{3}^{(A)}}
+\frac{d (u)}{dt}^{(0)} = e^{(1)}  ( \tilde{w} u + \frac{d (u)}{dt} ^{(1)} )
 \]</span></p>
-<p><span class="math display">\[
-B = {\mathbf{e}_{1}^{(B)}}, {\mathbf{e}_{2}^{(B)}}, {\mathbf{e}_{3}^{(B)}}
-\]</span></p>
-<p><span class="math display">\[
-A = R^{(A, B)} B
-\]</span></p>
+<section id="example-relative-sattelite-motion" class="level3">
+<h3 class="anchored" data-anchor-id="example-relative-sattelite-motion">Example: Relative Sattelite Motion</h3>
 <div class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
-<p><img src="refframes_files/figure-html/cell-2-output-1.png" width="540" height="389"></p>
+<p><img src="5_transportequation_files/figure-html/cell-2-output-1.png" width="540" height="389"></p>
 </div>
 </div>
 </section>

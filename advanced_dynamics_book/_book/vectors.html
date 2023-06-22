@@ -166,6 +166,7 @@ div.csl-indent {
   <li><a href="#vectors-and-cross-product" id="toc-vectors-and-cross-product" class="nav-link" data-scroll-target="#vectors-and-cross-product"><span class="header-section-number">2.1.2</span> Vectors and Cross Product</a></li>
   <li><a href="#rotation-matrices" id="toc-rotation-matrices" class="nav-link" data-scroll-target="#rotation-matrices"><span class="header-section-number">2.1.3</span> Rotation Matrices</a></li>
   </ul></li>
+  <li><a href="#rate-of-change-of-basis-vectors" id="toc-rate-of-change-of-basis-vectors" class="nav-link" data-scroll-target="#rate-of-change-of-basis-vectors"><span class="header-section-number">2.2</span> Rate of change of basis vectors</a></li>
   </ul>
 </nav>
     </div>
@@ -265,7 +266,19 @@ div.csl-indent {
 \]</span> where the double-underline notation indicates a reference frame matrix.</p>
 <p>In this course, all our reference frames consist of orthonormal basis vectors. In other words, the reference frame matrices are orthogonal. Furthermore, 3 dimensional rotation matrices is an element of the SO(3). This leads us to another useful property that we will frequently make use of in subsequent chapters: <span class="math display">\[
 (\textbf{R}^{(a,b)})^{-1} = (\textbf{R}^{(a,b)})^T
+\]</span> One must be cautious of the fact that <span class="math inline">\(\textbf{R}^{(a,b)}\)</span> and <span class="math inline">\(\textbf{R}^{(b,a)}\)</span> are different rotation matrices. In fact, one can easily show, using the relationship above, that <span class="math display">\[
+(\textbf{R}^{(a,b)})^{T} = \textbf{R}^{(b,a)}
 \]</span></p>
+</section>
+</section>
+<section id="rate-of-change-of-basis-vectors" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="rate-of-change-of-basis-vectors"><span class="header-section-number">2.2</span> Rate of change of basis vectors</h2>
+<p>Kinematics involves the examination of motion, which inherently involves systems that change over time. Understanding the fundamental principles of dynamics is centered around Newton’s Second Law. Therefore, it is crucial to have proficiency in expressing how rates of change can be articulated.</p>
+<p>So far, we have looked at how reference frames are formulated and how they are related by a rotation matrix namely (FIGURE OF FRAMES HERE) <span class="math display">\[
+\underline{\underline{e}}^{(1)} = \underline{\underline{e}}^{(0)}\textbf{R}^{(0,1)}
+\]</span></p>
+<p>The question one might ask is: what is the rate of change of reference frame (1) with respect to the reference frame (0)?</p>
+<p>In future applications or examples, one might be forced to examine the rate of change with respect to a moving frame. However, as Newton’s 2nd Law retains its simplest form in inertial frame, it is logical to first examine how a moving frame changes with respect to a fixed frame in time.</p>
 <p><span class="citation" data-cites="knuth84">Knuth (<a href="references.html#ref-knuth84" role="doc-biblioref">1984</a>)</span> for additional discussion of literate programming.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -283,7 +296,7 @@ Tip with Title
 <p>See <a href="#def-frame">Definition&nbsp;<span>2.1</span></a>.</p>
 <div class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
-<pre><code>1.0000000000000004
+<pre><code>1.0000000000000002
 1.0
 1.0000000000000004</code></pre>
 </div>
@@ -299,7 +312,6 @@ Tip with Title
 Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
 </div>
 </div>
-</section>
 </section>
 
 </main> <!-- /main -->

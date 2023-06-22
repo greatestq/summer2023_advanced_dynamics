@@ -148,6 +148,23 @@ In this course, all our reference frames consist of orthonormal basis vectors. I
 $$
 (\textbf{R}^{(a,b)})^{-1} = (\textbf{R}^{(a,b)})^T
 $$
+One must be cautious of the fact that $\textbf{R}^{(a,b)}$ and $\textbf{R}^{(b,a)}$ are different rotation matrices. In fact, one can easily show, using the relationship above, that
+$$
+(\textbf{R}^{(a,b)})^{T} = \textbf{R}^{(b,a)}
+$$
+
+## Rate of change of basis vectors
+Kinematics involves the examination of motion, which inherently involves systems that change over time. Understanding the fundamental principles of dynamics is centered around Newton's Second Law. Therefore, it is crucial to have proficiency in expressing how rates of change can be articulated.
+
+So far, we have looked at how reference frames are formulated and how they are related by a rotation matrix namely (FIGURE OF FRAMES HERE)
+$$
+\ddoubleunderline{e}^{(1)} = \ddoubleunderline{e}^{(0)}\textbf{R}^{(0,1)}
+$$
+
+The question one might ask is: 
+what is the rate of change of reference frame (1) with respect to the reference frame (0)? 
+
+In future applications or examples, one might be forced to examine the rate of change with respect to a moving frame. However, as Newton's 2nd Law retains its simplest form in inertial frame, it is logical to first examine how a moving frame changes with respect to a fixed frame in time. 
 
 
 @knuth84 for additional discussion of literate programming.
