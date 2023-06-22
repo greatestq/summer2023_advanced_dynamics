@@ -166,7 +166,10 @@ what is the rate of change of reference frame (1) with respect to the reference 
 
 In future applications or examples, one might be forced to examine the rate of change with respect to a moving frame. However, as Newton's 2nd Law retains its simplest form in inertial frame, it is logical to first examine how a moving frame changes with respect to a fixed frame in time. 
 
-
+Taking a time derivative of the above the above expression is a simple application of the chain rule from introductory calculus.
+$$
+\dot{\ddoubleunderline{e}^{(1)}} = \dot{\ddoubleunderline{e}^{(0)}\boldsymbol{R}^{(0,1)}}
+$$
 @knuth84 for additional discussion of literate programming.
 
 
